@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/Beige"
+    >
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="26dp"
+        android:textAlignment="center"
+        android:text="Gra w kości. Autor: Filip Sowa"
+        android:background="@color/Brown"
+        android:textColor="@color/white"
+        android:layout_margin="10dp"
+        android:padding="9dp"
+        />
+    <Button
+        android:id="@+id/roll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="RZUĆ KOŚĆMI"
+        android:background="@color/Chocolate"
+        android:layout_margin="10dp"
+        />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:id="@+id/result"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        >
+        <TextView
+            android:id="@+id/dice1"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_margin="9dp"
+            android:background="@color/white"
+            android:text="@string/questionMark"
+            android:gravity="center"
+            android:textSize="40dp"/>
+        <TextView
+            android:id="@+id/dice2"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_margin="9dp"
+            android:background="@color/white"
+            android:text="@string/questionMark"
+            android:gravity="center"
+            android:textSize="40dp"/>
+        <TextView
+            android:id="@+id/dice3"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_margin="9dp"
+            android:background="@color/white"
+            android:text="@string/questionMark"
+            android:gravity="center"
+            android:textSize="40dp"/>
+        <TextView
+            android:id="@+id/dice4"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_margin="9dp"
+            android:background="@color/white"
+            android:text="@string/questionMark"
+            android:gravity="center"
+            android:textSize="40dp"/>
+        <TextView
+            android:id="@+id/dice5"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_margin="9dp"
+            android:background="@color/white"
+            android:text="@string/questionMark"
+            android:gravity="center"
+            android:textSize="40dp"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/rollResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Wynik tego losowania: "
+        android:layout_margin="10dp"
+        android:textSize="16dp"
+        android:textAlignment="center"
+        />
+    <TextView
+        android:id="@+id/score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Wynik gry: "
+        android:layout_margin="10dp"
+        android:textSize="16dp"
+        android:textAlignment="center"
+        />
+
+    <TextView
+        android:id="@+id/rollCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Liczba rzutów: 0"
+        android:layout_margin="10dp"
+        android:textSize="16dp"
+        />
+
+    <Button
+        android:id="@+id/reset"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="RESETUJ WYNIK"
+        android:background="@color/Chocolate"
+        android:layout_margin="10dp"
+        />
+
+</LinearLayout>

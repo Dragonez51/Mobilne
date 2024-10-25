@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">diceGame</string>
+    <string name="questionMark"><char>?</char></string>
+</resources>
