@@ -44,22 +44,54 @@ public class MainActivity extends AppCompatActivity {
         roll.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                updateDice();
-                rollNumber++;
-                rollCount.setText("Liczba rzutów: "+rollNumber);
+                rollDice();
+                updateRollCount();
             }
         });
 
         reset.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
-                reset();
+                resetGame();
             }
         });
 
     }
 
-    private void reset(){
+    private void rollDice(){
+        Random rand = new Random();
+
+        int[] diceResults = new int[5];
+
+        for(int i=0;i<diceResults.length;i++){
+            diceResults[i] = rand.nextInt(6)+1;
+        }
+
+        displayDiceResults(diceResults);
+
+        int wynik = 0;
+
+        for(int i=0; i<diceResults.length; i++) {
+            int ileRazy = 1;
+            for (int j = 0; j < diceResults.length; j++) {
+                if (i == j) {
+                    continue;
+                }
+                if (diceResults[i] == diceResults[j]) {
+                    ileRazy++;
+                    break;
+                }
+            }
+            if (ileRazy > 1) {
+                wynik += diceResults[i];
+            }
+        }
+
+        updateScore(wynik);
+
+    }
+
+    private void resetGame(){
         dice1.setText("?");
         dice2.setText("?");
         dice3.setText("?");
@@ -70,57 +102,30 @@ public class MainActivity extends AppCompatActivity {
 
         overallScore = 0;
 
-        rollResult.setText("Wynik tego losowania: ");
+        rollResult.setText("Wynik tego losowania: 0");
 
-        score.setText("Wynik gry: ");
+        score.setText("Wynik gry: 0");
 
-        rollCount.setText("Liczba rzutów: ");
+        rollCount.setText("Liczba rzutów: 0");
     }
 
-    private void updateDice(){
-        Random rand = new Random();
-
-        int diceValue1 = rand.nextInt(6)+ 1;
-        int diceValue2 = rand.nextInt(6)+ 1;
-        int diceValue3 = rand.nextInt(6)+ 1;
-        int diceValue4 = rand.nextInt(6)+ 1;
-        int diceValue5 = rand.nextInt(6)+ 1;
-
-        dice1.setText(String.valueOf(diceValue1));
-        dice2.setText(String.valueOf(diceValue2));
-        dice3.setText(String.valueOf(diceValue3));
-        dice4.setText(String.valueOf(diceValue4));
-        dice5.setText(String.valueOf(diceValue5));
-
-        int[] tab = new int[5];
-        tab[0] = diceValue1;
-        tab[1] = diceValue2;
-        tab[2] = diceValue3;
-        tab[3] = diceValue4;
-        tab[4] = diceValue5;
-
-        int wynik = 0;
-
-        for(int i=0; i<tab.length; i++){
-            int ileRazy = 1;
-            for(int j=0;j<tab.length;j++){
-                if(i==j){
-                    continue;
-                }
-                if(tab[i] == tab[j]){
-                    ileRazy++;
-                    break;
-                }
-            }
-            if(ileRazy>1){
-                wynik+=tab[i];
-            }
-        }
-
-        rollResult.setText("Wynik tego losowania: "+wynik);
-
-        overallScore+=wynik;
-
+    private void updateScore(int newScore){
+        rollResult.setText("Wynik tego losowania: "+newScore);
+        overallScore += newScore;
         score.setText("Wynik gry: "+overallScore);
     }
+
+    private void updateRollCount(){
+        rollNumber++;
+        rollCount.setText("Liczba rzutów: "+rollNumber);
+    }
+
+    private void displayDiceResults(int[] diceResults){
+        dice1.setText(String.valueOf(diceResults[0]));
+        dice2.setText(String.valueOf(diceResults[1]));
+        dice3.setText(String.valueOf(diceResults[2]));
+        dice4.setText(String.valueOf(diceResults[3]));
+        dice5.setText(String.valueOf(diceResults[4]));
+    }
+
 }
