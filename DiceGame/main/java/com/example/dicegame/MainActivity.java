@@ -50,6 +50,31 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        reset.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view){
+                reset();
+            }
+        });
+
+    }
+
+    private void reset(){
+        dice1.setText("?");
+        dice2.setText("?");
+        dice3.setText("?");
+        dice4.setText("?");
+        dice5.setText("?");
+
+        rollNumber = 0;
+
+        overallScore = 0;
+
+        rollResult.setText("Wynik tego losowania: ");
+
+        score.setText("Wynik gry: ");
+
+        rollCount.setText("Liczba rzutów: ");
     }
 
     private void updateDice(){
