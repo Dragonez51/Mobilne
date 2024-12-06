@@ -87,7 +87,7 @@
         android:id="@+id/zobacz"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="ZOBACZ UCZESTNIKA"
+        android:text="ZOBACZ UZYTKOWNIKOW"
         android:layout_gravity="center"
         />
     <TextView
