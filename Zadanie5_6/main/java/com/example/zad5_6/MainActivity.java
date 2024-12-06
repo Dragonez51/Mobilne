@@ -8,6 +8,9 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class MainActivity extends AppCompatActivity {
 
     private TextView polubieniaTV, komunikaty;
@@ -16,11 +19,14 @@ public class MainActivity extends AppCompatActivity {
 
     private int polubienia;
     private String zalogowanyUzytkownik = "Nikt nie był zalogowany poprzednio";
+    private List<String> uzytkownicy;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        uzytkownicy = new ArrayList<>();
 
         polubienia = 0;
 
@@ -65,8 +71,15 @@ public class MainActivity extends AppCompatActivity {
                 } else if (!pass.equals(rptPass)) {
                     komunikaty.setText("Hasła się różnią");
                 } else {
-                    zalogowanyUzytkownik = email;
-                    komunikaty.setText("Zarejestrowano: " + zalogowanyUzytkownik);
+                    for(int i=0; i<uzytkownicy.size();i++){
+                        if(email.equals(uzytkownicy.get(i))){
+                            komunikaty.setText("Uzytkownik jest juz zarejestrowany");
+                            return;
+                        }
+                    }
+                    uzytkownicy.add(email);
+//                    zalogowanyUzytkownik = email;
+                    komunikaty.setText("Zarejestrowano: " + email);
                 }
             }
         });
@@ -74,7 +87,18 @@ public class MainActivity extends AppCompatActivity {
         zobacz.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                komunikaty.setText(zalogowanyUzytkownik);
+//                komunikaty.setText(uzytkownicy.);
+//                uzytkownicy.
+
+                String result = "";
+                if(uzytkownicy.isEmpty()){
+                    komunikaty.setText("Brak zarejestrowanych użytkowników");
+                }else{
+                    for(int i=0; i<uzytkownicy.size();i++){
+                        result+=uzytkownicy.get(i)+", ";
+                    }
+                    komunikaty.setText(result);
+                }
             }
         });
     }
