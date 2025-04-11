@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Powiadomienia_przypomnienie</string>
+    <string name="channel_name">Channel_name</string>
+    <string name="channel_description">Channel_description</string>
+</resources>
