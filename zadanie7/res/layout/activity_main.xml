@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:layout_marginTop="12dp"
+    android:background="@color/Niebieski">
+
+    <TextView
+        android:text="Moja książka:"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:textSize="40dp"
+        android:textColor="@color/Ciemnoszary"
+        />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/book"
+        />
+
+    <LinearLayout
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:weightSum="">
+
+        <Button
+            android:id="@+id/zobaczOpis"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Zobacz opis"
+            android:backgroundTint="@color/Niebieski"
+            android:textColor="@color/CiemnyTurkus"
+            android:layout_weight="1"
+            />
+
+        <Button
+            android:id="@+id/wishlist"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="DODAJ DO CHCĘ PRZECZYTAĆ"
+            android:backgroundTint="@color/Niebieski"
+            android:textColor="@color/CiemnyTurkus"
+            android:layout_weight="1"
+            />
+
+        <Button
+            android:id="@+id/reminder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="PRZYPOMNIJ O KSIĄŻCE"
+            android:backgroundTint="@color/Niebieski"
+            android:textColor="@color/CiemnyTurkus"
+            android:layout_weight="1"
+            />
+    </LinearLayout>
+
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:background="?android:attr/listDivider"
+        android:backgroundTint="@color/Jasnoszary" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="O Książce: "
+        android:textSize="30dp"
+        android:textStyle="bold"
+        android:textColor="@color/Ciemnoszary"
+        />
+    <TextView
+        android:id="@+id/opis"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="BIBLIA SQL to fascynująca powieść przygodowa, która wciągnie Cię od pierwszej strony."
+        android:textStyle="bold"
+        android:textColor="@color/Granatowy"
+        />
+
+    <TextView
+        android:id="@+id/additional"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Dodano do listy 'chcę przeczytać'"
+        android:textColor="@color/Ciemnozielony"
+        android:visibility="gone"
+        />
+
+    <TextView
+        android:id="@+id/Autor"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="Autor: Filip Sowa 4TP-E"
+        android:textColor="@color/Szary"
+        />
+
+</LinearLayout>
