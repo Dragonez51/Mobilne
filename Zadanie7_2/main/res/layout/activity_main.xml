@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="12dp"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Moja Książka"
+        android:textColor="@color/Ciemnoszary"
+        android:textSize="40dp"
+        />
+
+    <ImageView
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:src="@drawable/book"
+        />
+
+    <LinearLayout
+        android:id="@+id/buttonsPanel"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:background="@color/Niebieski"
+        >
+
+        <Button
+            android:id="@+id/readMore"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:text="ZOBACZ OPIS"
+            android:backgroundTint="@color/Niebieski"
+            android:textColor="@color/CiemnyTurkus"
+            />
+
+        <Button
+            android:id="@+id/like"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:text="DODAJ DO CHCĘ PRZECZYTAĆ"
+            android:backgroundTint="@color/Niebieski"
+            android:textColor="@color/CiemnyTurkus"
+            />
+
+        <Button
+            android:id="@+id/remind"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:text="PRZYPOMNIJ O KSIĄŻCE"
+            android:backgroundTint="@color/Niebieski"
+            android:textColor="@color/CiemnyTurkus"
+            />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:background="@color/Jasnoszary"/>
+
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="O Książce"
+        android:textSize="28dp"
+        android:textColor="@color/Ciemnoszary"
+        android:textStyle="bold"
+        />
+
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="Fascynująca powieść przygodowa, która wciągnie Cię od pierwszej strony."
+        android:textColor="@color/Granatowy"
+        android:textSize="20dp"
+        />
+
+    <TextView
+        android:id="@+id/addedToList"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="Dodano do listy"
+        android:textSize="15dp"
+        android:visibility="gone"
+        android:textColor="@color/Ciemnozielony"
+        />
+
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="Autor: Filip Sowa"
+        android:textSize="12dp"
+        android:textColor="@color/Szary"
+        />
+
+</LinearLayout>
