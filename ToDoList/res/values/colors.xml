@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="red">#FF0000</color>
+    <color name="green">#00FF00</color>
+    <color name="blue">#0000FF</color>
+    <color name="DarkBackground">#2e2e36</color>
+    <color name="TaskBackground">#0f0f1c</color>
+    <color name="TaskForeground">#82ff82</color>
+    <color name="DoneTask">#2f362f</color>
+    <color name="TitleForeground">#59f4ff</color>
+    <color name="TitleBackground">#A202585e</color>
+    <color name="AddTaskBackground">#A2490357</color>
+    <color name="AddTaskSubmit">#308505</color>
+    <color name="AddTaskCancel">#57030d</color>
+    <color name="transparent">#00ffffff</color>
+</resources>

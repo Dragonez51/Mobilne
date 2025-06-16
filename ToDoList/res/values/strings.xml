@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">ToDoList</string>
+    <string name="savedViewMode">ViewMode</string>
+    <string name="savedTaskForegroundRed">TaskTextForegroundRed</string>
+    <string name="savedTaskForegroundGreen">TaskTextForegroundGreen</string>
+    <string name="savedTaskForegroundBlue">TaskTextForegroundBlue</string>
+</resources>
